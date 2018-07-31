@@ -10,19 +10,20 @@
 #include <string>
 
 
-using namespace std;
+
 //using substring
-string reverce_the_string(string s)
-    {
-    return s.empty()?s:reverce_the_string(s.substr(1))+s[0] ;
-    }
+std::string reverce_the_string(std::string s)
+{
+   return s.empty()?s:reverce_the_string(s.substr(1))+s[0];
+}
 
 
-int main(int argc, char **argv) {
-    cout<<"Enter a sentence you want to print backward:\t";
-    string org_sent;
-    getline (cin,org_sent);
-    cout<<"Your backward sentence is:\t"<<reverce_the_string(org_sent);
+int main(int argc, char **argv)
+{
+    std::cout << "Enter a sentence you want to print backward:\t";
+    std::string org_sent;
+    getline(std::cin, org_sent);
+    std::cout << "Your backward sentence is:\t" << reverce_the_string(org_sent);
     return 0;
 }
 
